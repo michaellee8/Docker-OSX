@@ -7,11 +7,12 @@ services:
       context: .
       args:
         - SIZE=200G
-        - VERSION=10.15.5
+        - SHORTNAME=big-sur
     image: sickcodes/docker-osx
     privileged: true
     environment:
       - DISPLAY=${DISPLAY:-:0.0}
+      - SCREEN_SHARE_PORT=15900
     network_mode: "host"
     cap_add:
       - ALL
