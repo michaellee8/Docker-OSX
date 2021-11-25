@@ -13,6 +13,9 @@ services:
     environment:
       - DISPLAY=${DISPLAY:-:0.0}
       - SCREEN_SHARE_PORT=15900
+      - RAM=32
+      - CORES=12
+      - SMP=12
     network_mode: "host"
     cap_add:
       - ALL
